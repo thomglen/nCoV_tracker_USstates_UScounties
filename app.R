@@ -6,7 +6,8 @@
 # https://rviews.rstudio.com/2019/10/09/building-interactive-world-maps-in-shiny/
 # https://github.com/rstudio/shiny-examples/tree/master/063-superzip-example
 
-#setwd("~/Dropbox/glab/cv/R/nCoV_tracker_USstates_UScouties")
+
+# US State and US County data retreival, downloading and graphing tabs added by Thoamns Graeber
 
 
 # load required packages ####
