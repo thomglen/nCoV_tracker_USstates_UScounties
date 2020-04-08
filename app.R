@@ -6,8 +6,7 @@
 # https://rviews.rstudio.com/2019/10/09/building-interactive-world-maps-in-shiny/
 # https://github.com/rstudio/shiny-examples/tree/master/063-superzip-example
 
-
-# US State and US County data retreival, downloading and graphing tabs added by Thoamns Graeber
+#setwd("~/Dropbox/glab/cv/R/nCoV_tracker_USstates_UScouties")
 
 
 # load required packages ####
@@ -1370,7 +1369,7 @@ ui <- navbarPage(theme = shinytheme("flatly"), collapsible = TRUE,
                                           multiple = TRUE), 
                               
                               pickerInput("outcome_select2", "Outcome:",   
-                                          choices = c("Cases", "Deaths", "Cases per capita", "Deaths per capita"), 
+                                          choices = c("Cases", "Deaths", "Cases per capita (per 1000)", "Deaths per capita (per 1000)"), 
                                           selected = c("Cases"),
                                           multiple = FALSE),
                               
@@ -1434,7 +1433,7 @@ tabPanel("US County plots",
                          multiple = TRUE), 
              
              pickerInput("outcome_select3", "Outcome:",   
-                         choices = c("Cases", "Deaths", "Cases per capita", "Deaths per capita"), 
+                         choices = c("Cases", "Deaths", "Cases per capita (per 1000)", "Deaths per capita (per 1000)"), 
                          selected = c("Cases"),
                          multiple = FALSE),
              
@@ -1975,13 +1974,13 @@ server = function(input, output, session) {
       #db2$region = db2$state.per1k.ordered
     }
     
-    if (input$outcome_select2=="Cases per capita") { 
+    if (input$outcome_select2=="Cases per capita (per 1000)") { 
       db2$outcome = db2$per1k
       db2$new_outcome = db2$new_per1k
       #db2$region = db2$state.ordered
     }
     
-    if (input$outcome_select2=="Deaths per capita") { 
+    if (input$outcome_select2=="Deaths per capita (per 1000)") { 
       db2$outcome = db2$deaths_per1k 
       db2$new_outcome = db2$new_deaths_per1k 
       #db2$region = db2$state.per1k.ordered
@@ -2023,14 +2022,14 @@ server = function(input, output, session) {
       #db3$region = db3$state.county.ordered
     }
     
-    if (input$outcome_select3=="Cases per capita") { 
+    if (input$outcome_select3=="Cases per capita (per 1000)") { 
       db3$outcome = db3$per1k
       db3$new_outcome = db3$new_per1k
       #db3$region = db3$state.county.per1k.ordered
                                     #per1k.rev.ordered
     }
     
-    if (input$outcome_select3=="Deaths per capita") { 
+    if (input$outcome_select3=="Deaths per capita (per 1000)") { 
       db3$outcome = db3$deaths_per1k 
       db3$new_outcome = db3$new_deaths_per1k 
       #db3$region = db3$state.county.per1k.ordered
