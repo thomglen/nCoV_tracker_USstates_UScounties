@@ -9,8 +9,9 @@ The extended code can be accessed at https://graeber.shinyapps.io/ncov_tracker_u
 
 The US state and US county Covid data is updated daily from https://github.com/nytimes/covid-19-data.
 
-The US state and US county population data is circa 2019 estimates predominantly from the US Census website:
+The US state and US county population data is circa 2019 estimates, predominantly from the US Census website:
 - https://www.census.gov/data/datasets/time-series/demo/popest/2010s-state-total.html#par_textimage_500989927
 - https://www.census.gov/newsroom/press-kits/2020/pop-estimates-county-metro.html
+
 With some city population data from
 - https://worldpopulationreview.com/
