@@ -5,8 +5,8 @@ account: graeber
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2078351
-bundleId: 2989189
+bundleId: 3003742
 url: https://graeber.shinyapps.io/ncov_tracker_usstates_uscounties/
-when: 1586384537.29462
+when: 1586713089.12876
 asMultiple: FALSE
 asStatic: FALSE
